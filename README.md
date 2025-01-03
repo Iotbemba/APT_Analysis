@@ -19,4 +19,4 @@ APT(지능형 지속 공격) 분석 문서입니다.
 
 ### Issue Tracking
 
-1. [RansomHub](Issue-Tracking/RansomHub)
+1. [RansomHub](Issue%20Tracking/RansomHub)
