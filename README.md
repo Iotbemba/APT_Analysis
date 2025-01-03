@@ -11,8 +11,7 @@ APT(지능형 지속 공격) 분석 문서입니다.
 
 ### Well-Known APT
 
-1. Kimsuky
-2. [APT37_RakRAT](APT37_RakRAT)
+1. [APT37_RakRAT](APT37_RakRAT)
 
 ### Unknown APT
 
