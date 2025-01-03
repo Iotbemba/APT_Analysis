@@ -17,7 +17,7 @@ sha256 : 707e8cb56f32209ca837f2853801256cd3490ed2cc4b3428dc5e4238848f226d
 
 북한의 사이버 공격은 지속적으로 이어져 왔으며, 특히 파일리스 기법을 활용하는 RokRat은 2017년 최초 발견된 이후 APT 37 그룹의 주요 공격 도구로 계속 사용되고 있다.
 
-![[그림 1] 이력서.lnk 기본 정보](image.png)
+![[그림 1] 이력서.lnk 기본 정보](img/image.png)
 
 [그림 1] 이력서.lnk 기본 정보
 
@@ -27,7 +27,7 @@ sha256 : 707e8cb56f32209ca837f2853801256cd3490ed2cc4b3428dc5e4238848f226d
 
 이 캠페인에서는 .lnk 파일을 실행하면 숨겨진 PowerShell 스크립트가 동작하고 각각 PDF, bat, dat 파일을 실행한다. 각 파일이 유기적으로 동작하며 최종적으로 caption.dat으로 저장된 파일은 실행파일로 전환되어 실질적인 악성행위를 수행한다.
 
-![[그림 2] 악성코드 동작 순서도](image%201.png)
+![[그림 2] 악성코드 동작 순서도](img/image%201.png)
 
 [그림 2] 악성코드 동작 순서도
 
@@ -37,11 +37,11 @@ sha256 : 707e8cb56f32209ca837f2853801256cd3490ed2cc4b3428dc5e4238848f226d
 
 난독화된 PowerShell 스크립트를 포함하고 있으며, 링크 파일의 특정 위치에서 바이너리 데이터를 추출하여 3개의 파일을 생성 후 임시 폴더에 저장한다. 이 코드는 `.lnk` 파일을 통해 시스템에 악성 파일(`.pdf`, `.exe`, `.dat`, `.bat`)을 생성 및 실행하는 악성코드로 다음과 같은 동작을 한다.
 
-![[그림 3] 난독화 된 lnk PowerShell 스크립트](image%204.png)
+![[그림 3] 난독화 된 lnk PowerShell 스크립트](img/image%204.png)
 
 [그림 3] 난독화 된 lnk PowerShell 스크립트
 
-![[그림 4] 난독 해제한 PowerShell 코드](image%202.png)
+![[그림 4] 난독 해제한 PowerShell 코드](img/image%202.png)
 
 [그림 4] 난독 해제한 PowerShell 코드
 
@@ -111,7 +111,7 @@ $exePath=$env:temp+'\caption.dat';$exeFile = Get-Content -path $exePath -encodin
 
 미끼 문서는 한국해양수산연수원 오션폴리텍의 이력서로 악성행위를 하는 동안 피해자의 의심을 사지 않기 위해 생성되는 normal pdf이다. 총 3 페이지로 구성되어 있으며, 북한 사람의 개인정보를 도용한 것으로 보인다. 
 
-![[그림 5] 이력서.pdf  정보](image%203.png)
+![[그림 5] 이력서.pdf  정보](img/image%203.png)
 
 [그림 5] 이력서.pdf  정보
 
@@ -119,7 +119,7 @@ $exePath=$env:temp+'\caption.dat';$exeFile = Get-Content -path $exePath -encodin
 
 yandex와 fcloud를 이용하여 통신하는 것으로 보아 RoKRAT 악성코드와 연관이 있다.
 
-![[그림 6] Yandex를 이용한 C&C 서버 통신 정보](image%205.png)
+![[그림 6] Yandex를 이용한 C&C 서버 통신 정보](img/image%205.png)
 
 [그림 6] Yandex를 이용한 C&C 서버 통신 정보
 
