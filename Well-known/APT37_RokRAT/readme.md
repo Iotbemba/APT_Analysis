@@ -152,37 +152,7 @@ LNK Icon Smuggling (T1027.012) | windows 바로가기 파일(.lnk)에 아이콘 
 
 ```powershell
 rule Detect_sharke_bat
-{
-    meta:
-        description = "Detects sharke.bat file"
-        author = "yj"
-        date = "2024-12-29"
-        
-    strings:
-        $powershell = "powershell.exe"
-        $start_min = "start /min"
-        $invoke_command = "Invoke-Command"
-        $elephant_dat = "elephant.dat"
 
-    condition:
-        $powershell and $start_min and $invoke_command and $elephant_dat
-}
-
-rule Detect_lnk_file
-{
-    meta:
-        description = "Detects LNK file that points to malicious PowerShell script"
-        author = "yj"
-        date = "2024-12-29"
-        
-    strings:
-        $powershell = "powershell.exe"
-        $sharke_bat = "sharke.bat"
-        $elephant_dat = "elephant.dat"
-
-    condition:
-        $powershell and $sharke_bat and $elephant_dat
-}
 
 ```
 
