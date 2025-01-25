@@ -38,7 +38,7 @@
 
 ![image.png](img/image.png)
 
-## **2.Analysis**
+## **3. Analysis**
 
 ### XZ-Utils backdoor 스크립트
 
@@ -67,7 +67,7 @@
    - 24.02.24
    - 난독화 파일 호출 엔트리 파일
 
-### 매커니즘
+### Mechanism
 
 1. 악성코드 삽입
    1. 공격자는 xz-utils의 소스코드나 실행 파일을 변조함
