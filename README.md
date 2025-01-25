@@ -15,8 +15,7 @@ APT(지능형 지속 공격) 분석 문서입니다.
 
 ### Unknown APT
 
-1. [xz-utils backdoor](/Unknown/xz-utils_backdoor/)(WIP from 24.04.05(Fri))
-
+1. [xz-utils backdoor](/Unknown/xz-utils_backdoor/)
 ### Issue Tracking
 
 1. [RansomHub](RansomHub)
