@@ -38,7 +38,7 @@
 
 ![image.png](img/image.png)
 
-## Analysis
+## **2.Analysis**
 
 ### XZ-Utils backdoor 스크립트
 
@@ -890,7 +890,7 @@ rule SUSP_OBFUSC_SH_Indicators_Mar24_1 {
 }
 ```
 
-### **7. Reference**
+### **5. Reference**
 
 - [**XZ Utils 백도어: 공급망 취약성(CVE-2024-3094)**](https://www.logpoint.com/en/blog/emerging-threats/xz-utils-backdoor/)
 - https://github.com/Neo23x0/signature-base/blob/master/yara/bkdr_xz_util_cve_2024_3094.yar
