@@ -5,7 +5,7 @@
 - CVSS 점수: **10/10**
 - **2024.03.29(금)** 악성 활동 감지
 - **Andres Freund** 가 보고함
-- **배우는 JiaT75(JiaTan) - Jia Cheong Tan** 이라는 관리자
+- **Threat Actor는 JiaT75(JiaTan) - Jia Cheong Tan** 이라는 관리자
 - **liblzma 라이브러리** 내에서 **xz 5.6.0 및 5.6.1** 사용
 
 ### **1-2. xz-utils에 대하여**
