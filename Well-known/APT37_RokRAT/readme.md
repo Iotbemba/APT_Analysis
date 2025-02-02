@@ -5,7 +5,7 @@
 2. [Procedures](#2-procedures)
 3. [Analysis](#3-analysis)
 4. [MITRE ATT&CK Metrics](#4-mitre-attck-metrics)
-5. [YARA](#4-yara)
+5. [YARA](#5-yara)
 6. [Reference](#6-reference)
 
 sample
@@ -159,30 +159,28 @@ rule Detect_sharke_bat
         date = "2024-12-29"
         
     strings:
-        $powershell = "powershell.exe"
-        $start_min = "start /min"
-        $invoke_command = "Invoke-Command"
-        $elephant_dat = "elephant.dat"
 
-    condition:
-        $powershell and $start_min and $invoke_command and $elephant_dat
-}
+      $s1 = "$lnkFile.Seek(0x0000111A, [System.IO.SeekOrigin]::Begin)" ascii
+      $s2 = "$pdfFile=New-Object byte[] 0x00023A37" ascii
+      $s3 = "$exeFile=New-Object byte[] 0x000D9190" ascii
+      $s4 = "$batByte = New-Object byte[] 0x00000147" ascii
 
-rule Detect_lnk_file
-{
-    meta:
-        description = "Detects LNK file that points to malicious PowerShell script"
-        author = "yj"
-        date = "2024-12-29"
-        
-    strings:
-        $powershell = "powershell.exe"
-        $sharke_bat = "sharke.bat"
-        $elephant_dat = "elephant.dat"
 
-    condition:
-        $powershell and $sharke_bat and $elephant_dat
-}
+      $s5 = "& $pdfPath" ascii
+      $s6 = "&$executePath" ascii
+
+
+      $p1 = "$exePath=$env:temp+'\\caption.dat'" ascii
+      $p2 = "$batStrPath = $env:temp+'\\elephant.dat'" ascii
+      $p3 = "$executePath = $env:temp+'\\sharke.bat'" ascii
+
+      $pdf_header = "%PDF-1.4" ascii
+
+   condition:
+      filesize < 500KB and
+      all of ($s*) and
+      any of ($p*) and
+      $pdf_header
 
 ```
 
