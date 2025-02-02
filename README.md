@@ -11,7 +11,7 @@ APT(지능형 지속 공격) 분석 문서입니다.
 
 ### Well-Known APT
 
-1. [APT37_RakRAT](/Well-known/APT37%20RakRAT)
+1. [APT37_RakRAT](/Well-known/APT37_RokRAT)
 
 ### Unknown APT
 
